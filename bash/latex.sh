@@ -73,6 +73,6 @@ vitex() {
 }
 
 # Uncomment the lines below in order to test the functions defined within this document.
-vitex "$1"
+# vitex "$1"
 
 
