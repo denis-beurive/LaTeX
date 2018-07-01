@@ -10,6 +10,18 @@
 #
 # Some functions need to be configured. Please read the functions descriptions carefully.
 
+# Make sure that the functions defined in this file are not already defined (for other purposes).
+
+type check_file_encoding 2>&1 >/dev/null | egrep ' not found$' > /dev/null
+if [ $? -ne 0 ]; then
+   echo "WARNING !!!! Function check_file_encoding() will be redefined !"
+fi
+
+type vitex 2>&1 >/dev/null | egrep ' not found$' > /dev/null
+if [ $? -ne 0 ]; then
+   echo "WARNING !!!! Function vitex() will be redefined !"
+fi
+
 # This function checks that a given character set is included within a given list of character sets.
 # @param [string] #1 The given character set.
 #        For example: "ISO-8859-15"
@@ -74,5 +86,4 @@ vitex() {
 
 # Uncomment the lines below in order to test the functions defined within this document.
 # vitex "$1"
-
 
