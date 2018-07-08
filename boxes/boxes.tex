@@ -1,0 +1,94 @@
+\documentclass{basic}
+\usepackage{showframe}
+
+% The line below is important.
+% By default, the beginnings of paragraphs are indented.
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+     % \framebox and \makebox
+     %
+     % These two commands behave the same way.
+     % \framebox draws a frame around the box, \makebox does not.
+     %
+     % Usage:
+     %
+     %     \makebox[<width>][<alignment>=(l|r|c|s)]{...}
+     %     \framebox[<width>][<alignment>=(l|r|c|s)]{...}
+     %
+     % Warning!
+     %
+     %     These boxes can hold only one line!
+     %
+     % Note:
+     %
+     %     It is possible to set the length of the space between the box edges and its content.
+     %
+     %     \setlength{\fboxsep}{30px}
+
+     The boxes below are positioned in paragraph mode.
+
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+
+     \framebox[\textwidth][l]{
+        \textbackslash framebox[\textbackslash textwidth][l]
+     }
+
+     \framebox[\textwidth][r]{
+        \textbackslash framebox[\textbackslash textwidth][r]
+     }
+
+     \framebox[\textwidth][c]{
+        \textbackslash framebox[\textbackslash textwidth][c]
+     }
+
+     \framebox[\textwidth][s]{
+        Left \textbackslash framebox[\textbackslash textwidth][s] right
+     }
+
+     \framebox[\textwidth][l]{
+        L1
+
+        L2
+     }
+
+     It is possible to set the length of the space between the box edges and its content.
+
+     Set length to 30px:
+
+     \setlength{\fboxsep}{30px}
+     \framebox{a}
+    
+     Set length to 0px:
+
+     \setlength{\fboxsep}{0px}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+     \framebox{a} \framebox{b} \framebox{c}
+
+\end{document}
