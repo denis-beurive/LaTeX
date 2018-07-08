@@ -9,10 +9,10 @@ LATEX_EXE     = /usr/bin/pdflatex
 LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode
 PDF_VIEWER    = xdg-open 
 
-boxes.pdf: boxes.tex basic.cls
-	${LATEX_EXE} ${LATEX_OPTIONS} boxes.tex && echo "SUCCESS" && ${PDF_VIEWER} boxes.pdf 
+makebox-framebox.pdf: makebox-framebox.tex basic.cls
+	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
 
-all: boxes.pdf
+all: makebox-framebox.pdf
 
 clean:
 	rm -f *.log *.out *.aux
