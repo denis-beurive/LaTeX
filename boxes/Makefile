@@ -12,8 +12,14 @@ PDF_VIEWER    = xdg-open
 makebox-framebox.pdf: makebox-framebox.tex basic.cls
 	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
 
-all: makebox-framebox.pdf
+parbox.pdf: parbox.tex basic.cls
+	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
+
+all: makebox-framebox.pdf \
+     parbox.pdf
 
 clean:
 	rm -f *.log *.out *.aux
 
+clean-all: 
+	rm -f *.log *.out *.aux *.pdf

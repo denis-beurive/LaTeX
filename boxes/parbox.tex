@@ -1,0 +1,80 @@
+\documentclass{basic}
+\usepackage{showframe}
+
+% The line below is important.
+% By default, the beginnings of paragraphs are indented.
+\setlength{\parindent}{0pt}
+
+% The line below sets the length of the space between the \framebox edges and its content.
+% \framebox boxes are used to draw edged around the \parbox boxes.
+\setlength{\fboxsep}{0px}
+
+\begin{document}
+
+     % \parbox
+     %
+     % This command creates a box with a fixed width that contains multiline text.
+     %
+     % Usage:
+     %
+     %     \parbox{<width>}{<text>}
+
+     \framebox{\parbox{10cm}{%
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sagittis, dui et facilisis placerat, magna neque placerat magna, non scelerisque odio ex in neque. In vel aliquam odio. Vivamus dictum molestie metus. Nulla facilisi. Nullam iaculis pharetra pulvinar. Nulla vestibulum nisl sit amet elit fermentum tempor.%
+     }}
+
+     \framebox{\parbox{10cm}{%
+          \raggedleft%
+          This text is right aligned.\\
+          text%
+     }}
+
+     \framebox{\parbox{10cm}{%
+          \raggedright%
+          This text is left aligned.\\
+          text%
+     }}
+
+     \framebox{\parbox{10cm}{%
+          \centering%
+          This text is centered.\\
+          text%
+     }}
+
+     % \ignorespaces can be replaced by "%"
+     % Remember that a carriage return is considered as a space.
+
+     \framebox[\textwidth]{\ignorespaces
+          \framebox{\parbox{5cm}{
+             \raggedright left\\text
+          }}\ignorespaces
+          \hfill\ignorespaces
+          \framebox{\parbox{5cm}{
+             \raggedleft right\\text
+          }}\ignorespaces
+     }
+
+     \framebox{\parbox{10cm}{%
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+          \framebox{a} \framebox{b} \framebox{c}
+     }}
+
+
+
+\end{document}
