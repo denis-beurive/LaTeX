@@ -11,6 +11,8 @@ In order to use `lualatex`, you must install the packages listed below:
 * `texlive-luatex`
 * `texlive-xetex`  
 
+commands:
+
 	sudo apt-get install texlive-luatex
 	sudo apt-get install texlive-xetex
 
