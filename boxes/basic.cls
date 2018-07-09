@@ -18,13 +18,6 @@
             % footskip=1cm
             ]{geometry} 
 
-% [inputenc] This package translates various standard and other input encodings into a LaTeX internal language. 
-% Here, we configure the package so that it will interpret input characters as defined by the ISO 8859-15 charset.
-\usepackage[latin9]{inputenc}
-
-% [fontenc] The package allows the user to select font en­codings, and for each encoding provides an inte­face to font-encoding-specific com­ands for each font.
-% The T1 font encoding is an 8-bit encoding and uses fonts that have 256 glyphs. 
-\usepackage[T1]{fontenc} 
 
 % The package adds an optional argument to the enumerate environment which determines the style in which the counter is printed.
 \usepackage{enumerate}
