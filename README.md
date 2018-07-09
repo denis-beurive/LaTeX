@@ -9,12 +9,18 @@ First, you must install `texlive`:
 In order to use `lualatex`, you must install the packages listed below:
 
 * `texlive-luatex`
-* `texlive-xetex`  
+* `texlive-xetex`
+* `lmodern` (this package fixes a problem with luaotfload)
+* `texlive-fonts-extra`
+
+> See: https://tex.stackexchange.com/questions/161595/fontspec-throwing-error-with-lualatex-broken
 
 commands:
 
 	sudo apt-get install texlive-luatex
 	sudo apt-get install texlive-xetex
+	sudo apt-get install lmodern 
+	sudo apt-get install texlive-fonts-extra
 
 ## Resources
 

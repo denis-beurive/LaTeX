@@ -33,6 +33,15 @@ If you want to see a given font, then you can use the follwing command:
 
 	/usr/bin/gnome-font-viewer /usr/share/fonts/truetype/tlwg/Umpush-Bold.ttf
 
+# Clear caches for luaotfload
+
+If you have troubles with `luaotfload`, you can delete the `lualatex` cache and rebuild it:
+
+	luaotfload-tool --diagnose=environment,permissions
+	find ~/.texmf-var/
+	rm -rf ~/.texmf-var/luatex-cache/*
+	luaotfload-tool --update
+
 Resources:
 
 https://en.wikibooks.org/wiki/LaTeX/Fonts#Using_TTF_and_OTF_fonts
