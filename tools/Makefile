@@ -5,15 +5,18 @@
 #
 # You may need to customise this document. 
 
-LATEX_EXE     = /usr/bin/pdflatex
-LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode
+LATEX_EXE     = /usr/bin/lualatex
+LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode --output-format=pdf
 PDF_VIEWER    = xdg-open 
 
 basic.pdf: basic.tex basic.cls
-	${LATEX_EXE} ${LATEX_OPTIONS} basic.tex && echo "SUCCESS" && ${PDF_VIEWER} basic.pdf 
+	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} basic.pdf 
 
 all: basic.pdf
 
 clean:
 	rm -f *.log *.out *.aux
+
+clean-all: clean
+	rm -f *.pdf
 
