@@ -18,7 +18,7 @@
             % footskip=1cm
             ]{geometry} 
 
-% [fontenc] The package allows the user to select font en­codings, and for each encoding provides an inte­face to font-encoding-specific com­ands for each font.
+% [fontenc] The package allows the user to select font encodings, and for each encoding provides an interface to font-encoding-specific comands for each font.
 % The T1 font encoding is an 8-bit encoding and uses fonts that have 256 glyphs. 
 \usepackage[T1]{fontenc} 
 
