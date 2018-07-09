@@ -2,8 +2,17 @@
 
 ## System configuration
 
-One very important thing when using LaTeX is characters encoding. You must ensure that all files are recorded within the valid characters encoding.
+First, you must install `texlive`:
 
+	sudo apt-get install texlive
+
+In order to use `lualatex`, you must install the packages listed below:
+
+* `texlive-luatex`
+* `texlive-xetex`  
+
+	sudo apt-get install texlive-luatex
+	sudo apt-get install texlive-xetex
 
 ## Resources
 
