@@ -10,7 +10,7 @@ LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode --output-f
 PDF_VIEWER    = xdg-open 
 
 basic.pdf: basic.tex basic.cls
-	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} basic.pdf 
+	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
 
 all: basic.pdf
 
