@@ -5,8 +5,8 @@
 #
 # You may need to customise this document. 
 
-LATEX_EXE     = /usr/bin/pdflatex
-LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode
+LATEX_EXE     = /usr/bin/lualatex
+LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode --output-format=pdf
 PDF_VIEWER    = xdg-open 
 
 makebox-framebox.pdf: makebox-framebox.tex basic.cls
@@ -21,5 +21,5 @@ all: makebox-framebox.pdf \
 clean:
 	rm -f *.log *.out *.aux
 
-clean-all: 
-	rm -f *.log *.out *.aux *.pdf
+clean-all: clean
+	rm -f *.pdf
