@@ -2,6 +2,8 @@
 
 ## System configuration
 
+### Mandatory
+
 First, you must install `texlive`:
 
 	sudo apt-get install texlive
@@ -21,6 +23,12 @@ commands:
 	sudo apt-get install texlive-xetex
 	sudo apt-get install lmodern 
 	sudo apt-get install texlive-fonts-extra
+
+### Recommanded
+
+The VIM editor has a very nice LaTex mode.
+
+	sudo apt-get install vim
 
 ## Resources
 

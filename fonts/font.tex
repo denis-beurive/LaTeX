@@ -14,11 +14,93 @@
 % Find the names of all fonts under Ubuntu:
 % find /usr/share/texmf/fonts/ -name "*.otf" | xargs -n1 fc-scan --format "%{fullname}\n" | sed 's/,.\+$//'
 \usepackage{fontspec}
-% \setmainfont[Ligatures=TeX]{teletext2}
+\setmainfont[Ligatures=TeX]{Gentium}
+
+% Font setting can be done through commands.
+% Below, we define 2 commands that set 2 fonts ("LMRoman6-Regular" and "LMMonoLt10-Oblique").
+% Be aware that, used without care, these commands change the font all the way down the end of the document.
+% You often want to restrict the use of a font to a certain area. You can do so by using "{...}" or "\begingroup ... \endgroup".
+
+\newcommand{\myfontOne}{
+       \setmainfont[Ligatures=TeX]{LMRoman6-Regular}
+}
+
+\newcommand{\myfontTwo}{
+       \setmainfont[Ligatures=TeX]{LMMonoLt10-Oblique}
+}
+
+% Or the fonts can be set through the use of environments.
+% Please note that this technique isolates the modification introduced by the selection of the font to the area defined by the environment.
+
+\newenvironment{myfontOneEnv}{
+       \setmainfont[Ligatures=TeX]{LMRoman6-Regular}
+}
+
+\newenvironment{myfontTwoEnv}{
+       \setmainfont[Ligatures=TeX]{LMMonoLt10-Oblique}
+}
+
+% At last, you can use \DeclareTextFontCommand.
+
+\DeclareTextFontCommand{\myFontOneFt}{\myfontOne}
+
+\DeclareTextFontCommand{\myFontTwoFt}{\myfontTwo}
 
 \begin{document}
 
-     test
+     Default main font.
+
+     % Please note the use of the enclosing characters "{" and "}".
+     % This construct is used to isolate the effect of the command to the area delimited by the characters "{" and "}".
+     {\myfontOne The first defined font.}
+
+     Default main font.
+
+     % Please note the use of the enclosing characters "{" and "}".
+     % This construct is used to isolate the effect of the command to the area delimited by the characters "{" and "}".
+     {\myfontTwo The second defined font.}
+
+     Default main font.
+
+     % The same result can be obtained by using the construct \begingroup ... \endgroup.
+    
+     \begingroup
+          \myfontOne
+          The first defined font.         
+     \endgroup 
+
+     Default main font.
+
+     \begingroup
+          \myfontTwo
+          The second defined font.
+     \endgroup 
+
+     Default main font.
+
+     % The same result can also be obtained by using environments.
+
+     \begin{myfontOneEnv}
+          The first defined font.         
+     \end{myfontOneEnv}
+
+     Default main font.
+
+     \begin{myfontTwoEnv}
+          The second defined font.         
+     \end{myfontTwoEnv}
+
+     Default main font.
+
+     % And, the other solution.
+
+     \myFontOneFt{The first defined font.}
+
+     Default main font.
+
+     \myFontTwoFt{The second defined font.}
+
+     Default main font.
 
 \end{document}
 
