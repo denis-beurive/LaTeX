@@ -35,11 +35,20 @@ If you want to see a given font, then you can use the follwing command:
 
 # Clear caches for luaotfload
 
-If you have troubles with `luaotfload`, you can delete the `lualatex` cache and rebuild it:
+If you have troubles with `luaotfload`, you can delete the `lualatex` cache and rebuild it.
 
-	luaotfload-tool --diagnose=environment,permissions
-	find ~/.texmf-var/
+First, find the path to the cache:
+
+	luaotfload-tool --diagnose=environment,permissions | grep 'Checking permissions of'
+
+> By default, the cache should be under your home directory. If you can't fond it, then try that: `sudo / find -name ".texmf-var" -print` 
+
+Delete the cache:
+
 	rm -rf ~/.texmf-var/luatex-cache/*
+
+And then, rebuild the cache:
+
 	luaotfload-tool --update
 
 Resources:
