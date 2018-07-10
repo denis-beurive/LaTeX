@@ -1,0 +1,46 @@
+\documentclass{basic}
+
+\usepackage{showframe}
+\usepackage{fontspec}
+
+% The line below is important.
+% By default, the beginnings of paragraphs are indented.
+\setlength{\parindent}{0pt}
+
+% The line below sets the length of the space between the \framebox edges and its content.
+% \framebox boxes are used to draw edged around the \parbox boxes.
+\setlength{\fboxsep}{0px}
+
+\DeclareTextFontCommand{\techft}{
+        \setmainfont[Ligatures=TeX]{Gentium Book Basic Bold}
+}
+
+\begin{document}
+
+     % WARNING !!!
+     % The "*" is very important here! See the explanation here: 
+     % https://tex.stackexchange.com/questions/76101/difference-between-vspace-and-vspace-for-negative-arguments
+     % If you remove the "*", then the box will be positioned at the top of the page.
+
+     \vspace*{1cm}
+
+     \framebox[3cm][c]{
+          This is a box
+     }
+     \hspace{2cm}
+     \framebox[3cm][c]{
+          This is another box
+     } % WARNING: the blank line below has an important influence (delete the blank line... and see what happens!)
+
+     \vspace{1cm}
+     \framebox[3cm][c]{
+          This is a box
+     }
+
+     A \techft{ \textbackslash vspace\{6cm\} } in paragraphe mode \vspace{6cm} is a bad idea... It appears to be treated as a space... but:
+
+     Look at the position of this line!
+
+\end{document}
+
+
