@@ -9,10 +9,10 @@ LATEX_EXE     = /usr/bin/lualatex
 LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode --output-format=pdf
 PDF_VIEWER    = xdg-open 
 
-basic.pdf: basic.tex basic.cls
+length.pdf: length.tex basic.cls
 	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
 
-all: basic.pdf
+all: length.pdf
 
 clean:
 	rm -f *.log *.out *.aux
