@@ -12,9 +12,6 @@
             top=2cm,
             bottom=2cm]{geometry}
 
-% The package adds an optional argument to the enumerate environment which determines the style in which the counter is printed.
-\usepackage{enumerate}
-
 % We redefine the font size named "normalsize".
 % Please note that LaTeX defines other names for font sizes (for example: tiny, small...).
 % See https://www.sharelatex.com/learn/Font_sizes,_families,_and_styles#Reference_guide
