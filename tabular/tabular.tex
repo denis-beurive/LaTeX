@@ -1,0 +1,34 @@
+% This file is used as a resource to illustrate the use of the presented tools.
+
+\documentclass{basic}
+\usepackage{showframe}
+
+% The line below is important.
+% By default, the beginnings of paragraphs are indented.
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{0pt}
+
+\newcommand{\upLeft}{%
+   \framebox[3cm][l]{up left}%
+}%
+
+\newcommand{\upRight}{%
+   \framebox[3cm][r]{up right}%
+}%
+
+\newcommand{\middleCenter}{%
+   \framebox[3cm][c]{center}%
+}%
+
+
+
+
+\begin{document}
+
+   \begin{tabular}{lll}
+      \upLeft & \middleCenter & \upRight \\
+   \end{tabular}
+
+
+
+\end{document}
