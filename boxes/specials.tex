@@ -1,0 +1,26 @@
+\documentclass{basic}
+\usepackage{showframe}
+
+% The line below is important.
+% By default, the beginnings of paragraphs are indented.
+\setlength{\parindent}{0pt}
+
+% The line below sets the length of the space between the \framebox edges and its content.
+% \framebox boxes are used to draw edged around the \parbox boxes.
+\setlength{\fboxsep}{0px}
+
+\begin{document}
+
+    \renewcommand{\enframe}{no}
+
+    \linebox{10cm}{c}{this is a linebox}
+
+    \parabox{10cm}{this is a parabox}
+
+    \renewcommand{\enframe}{yes}
+
+    \linebox{10cm}{c}{this is a linebox}
+
+    \parabox{10cm}{this is a parabox}
+
+\end{document}

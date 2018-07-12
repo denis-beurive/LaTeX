@@ -26,3 +26,44 @@
 \renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
 
 
+% ----------------------------------------------------------------------
+% Useful commands
+% ----------------------------------------------------------------------
+
+
+% This package allows simple TF THEN ELSE constructions.
+\usepackage{ifthen}
+
+% Set the value to "yes" if you want to see the borders of the boxes you use.
+\newcommand{\enframe}{yes}
+
+% Create a box that contains only one line.
+% Depending on the value of \enframe, the box is framed or not.
+% Param 1: width of the box.
+% Param 2: justification (l|c|r}
+% Param 3: the content of the box.
+\newcommand{\linebox}[3]{%
+    \ifthenelse{\equal{\enframe}{yes}}{%
+        \framebox[#1][#2]{#3}%
+    }{%
+        \makebox[#1][#2]{#3}%
+    }%
+}%
+
+% Create a box that contains one or more lines.
+% Depending on the value of \enframe, the box is framed or not.
+% Param 1: width of the box.
+% Param 2: the content of the box.
+\newcommand{\parabox}[2]{%
+    \ifthenelse{\equal{\enframe}{yes}}{%
+        \framebox[#1][c]{%
+            \parbox{#1}{#2}%
+        }%
+    }{%
+        \parbox{#1}{#2}%
+    }%
+}%
+
+
+
+
