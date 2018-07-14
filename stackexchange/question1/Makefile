@@ -9,13 +9,13 @@ LATEX_EXE     = /usr/bin/lualatex
 LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode --output-format=pdf
 PDF_VIEWER    = xdg-open 
 
+all: list.pdf table.pdf
+
 list.pdf: list.tex class.cls
 	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
 
 table.pdf: table.tex class.cls
 	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
-
-all: list.pdf table.pdf
 
 clean:
 	rm -f *.log *.out *.aux
