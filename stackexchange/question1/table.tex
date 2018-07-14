@@ -49,4 +49,52 @@
          \end{tabular}%
    \end{packed_tabular}%
 
+   % One solution may be to split the table into smaller tables.
+   % But this solution does not work **well**.
+   % The widths of the columns are not fixed.
+   % Therefore the tables may have different widths for the same columns.
+
+   \begin{absolutelynopagebreak}
+      Title
+      \vspace{15pt}
+   
+      \begin{packed_tabular}
+         \begin{tabular}{|l|c|l|}
+             a   & ~ & experience 0 \\
+             aa  & ~ & experience 1 \\
+             aaa & ~ & experience 2 \\
+             a   & ~ & experience 3 \\
+         \end{tabular}%
+      \end{packed_tabular}%
+   \end{absolutelynopagebreak}%
+%
+   \begin{absolutelynopagebreak}
+      \begin{packed_tabular}%
+         \begin{tabular}{|l|c|l|}%
+             a & ~ & experience 4 \\
+             a & ~ & experience 5 \\
+         \end{tabular}%
+      \end{packed_tabular}%
+   \end{absolutelynopagebreak}%
+%
+   \begin{absolutelynopagebreak}%
+      \begin{packed_tabular}%
+         \begin{tabular}{|l|c|l|}%
+             a & ~ & experience 6 \\
+             a & ~ & experience 7 \\
+             a & ~ & experience 8 \\
+             a & ~ & experience 9 \\
+             a & ~ & experience 10 \\
+             a & ~ & experience 11 \\
+             a & ~ & experience 12 \\
+             a & ~ & experience 13 \\
+             a & ~ & experience 14 \\
+             a & ~ & experience 15 \\
+             a & ~ & experience 16 \\
+             a & ~ & experience 17 \\
+         \end{tabular}%
+      \end{packed_tabular}%
+   \end{absolutelynopagebreak}%
+
+
 \end{document}
