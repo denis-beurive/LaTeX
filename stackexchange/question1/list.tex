@@ -1,0 +1,77 @@
+\documentclass{class}
+
+% See http://borntocode.fr/latex-customisation-de-listes-a-puces/
+\newenvironment{packed_enum}{
+   \begin{itemize}[topsep=0pt, itemsep=1pt, parsep=0pt, partopsep=0pt]%
+}{\end{itemize}}
+
+% See https://tex.stackexchange.com/questions/94699/absolutely-definitely-preventing-page-break
+\newenvironment{absolutelynopagebreak}{
+  \par\nobreak\vfil\penalty0\vfilneg
+  \vtop\bgroup
+}{\par\xdef\tpd{\the\prevdepth}\egroup\prevdepth=\tpd}
+
+
+\begin{document}
+
+   % Nothing prevents the title to be printed on one page and the 10 items on
+   % the next page. I would like to make sure that the title and, at least 2
+   % items, will be printed on the same page.
+
+   Title
+   \vspace{15pt}
+ 
+   \begin{packed_enum}
+      \item Iten 1
+      \item Iten 2
+      \item Iten 3
+      \item Iten 4
+      \item Iten 5
+      \item Iten 6
+      \item Iten 7
+      \item Iten 8
+      \item Iten 9
+      \item Iten 10
+      \item Iten 11
+      \item Iten 12
+      \item Iten 13
+      \item Iten 14
+      \item Iten 15
+      \item Iten 16
+      \item Iten 17
+      \item Iten 18
+   \end{packed_enum}
+   \vspace{5cm}
+
+   % One solution, that works for the list.
+   % But, please note: I create 2 lists instead of one.
+
+   \begin{absolutelynopagebreak}
+      Title
+      \vspace{15pt}
+
+      \begin{packed_enum}         % <= first list
+         \item Iten 1
+         \item Iten 2
+      \end{packed_enum}
+   \end{absolutelynopagebreak}
+   \begin{packed_enum}            % <= second list
+      \item Iten 3
+      \item Iten 4
+      \item Iten 5
+      \item Iten 6
+      \item Iten 7
+      \item Iten 8
+      \item Iten 9
+      \item Iten 10
+      \item Iten 11
+      \item Iten 12
+      \item Iten 13
+      \item Iten 14
+      \item Iten 15
+      \item Iten 16
+      \item Iten 17
+      \item Iten 18
+   \end{packed_enum}
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass{class}
+
+% ---------------------------------------------------------------------------
+% I define fiew environments.
+% ---------------------------------------------------------------------------
+
+% See https://www.sharelatex.com/learn/Tables
+\newenvironment{packed_tabular}{
+   \setlength{\tabcolsep}{0pt}
+}
+
+% See https://tex.stackexchange.com/questions/94699/absolutely-definitely-preventing-page-break
+\newenvironment{absolutelynopagebreak}{
+  \par\nobreak\vfil\penalty0\vfilneg
+  \vtop\bgroup
+}{\par\xdef\tpd{\the\prevdepth}\egroup\prevdepth=\tpd}
+
+\begin{document}
+
+   % 1. Nothing prevents the title to be printed on one page and the 5 lines of
+   %    the table to be printed on the next page. I would like to make sure that
+   %    the title and, at least 2 lines, will be printed on the same page.
+   % 2. The table cannot be broken. All rows are printed the one after the other...
+   %    even if the end of the text area is reached.
+
+   Title
+   \vspace{15pt}
+
+   \begin{packed_tabular}
+      \begin{tabular}{lcl}
+          a   & ~ & experience 0 \\
+          aa  & ~ & experience 1 \\
+          aaa & ~ & experience 2 \\
+          a   & ~ & experience 3 \\
+          aa  & ~ & experience 4 \\
+          aaa & ~ & experience 5 \\
+          a   & ~ & experience 6 \\
+          aa  & ~ & experience 7 \\
+          aaa & ~ & experience 8 \\
+          a   & ~ & experience 9 \\
+          aa  & ~ & experience 10 \\
+          aaa & ~ & experience 11 \\
+          a   & ~ & experience 12 \\
+          aa  & ~ & experience 13 \\
+          aaa & ~ & experience 14 \\
+          a   & ~ & experience 15 \\
+          aa  & ~ & experience 16 \\
+          aaa & ~ & experience 17 \\
+         \end{tabular}%
+   \end{packed_tabular}%
+
+\end{document}
