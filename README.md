@@ -34,6 +34,6 @@ The VIM editor has a very nice LaTex mode.
 
 https://www.latex-howto.be/book/download_fr
 
-
+https://coreight.com/content/guide-polices-typographie (what is a font ?)
 
 
