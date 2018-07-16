@@ -1,7 +1,11 @@
-% This file is used as a resource to illustrate the use of the presented tools.
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{basic}[1995/10/30 Standard LaTeX minimal class]
+
+% Usually classes are built upon another one, such as article, not upon minimal
+% (this class is only for experiments, not for producing actual documentsi).
+% See https://tex.stackexchange.com/questions/440462/hline-does-not-produce-anything
+\LoadClass{article}
 
 % [geometry] This package provides a flexible and easy interface to page dimensions.
 \usepackage[a4paper,
@@ -10,13 +14,8 @@
             right=1cm,
             % We set the dimensions of the top and bottom margins.
             top=2cm,
-            bottom=2cm,                          
-            % headheight=2cm,
-            % footskip=1cm
+            bottom=2cm
             ]{geometry} 
-
-% The package adds an optional argument to the enumerate environment which determines the style in which the counter is printed.
-\usepackage{enumerate}
 
 % We (must) redefine the font size named "normalsize".
 % Please note that LaTeX defines other names for font sizes (for example: tiny, small...).

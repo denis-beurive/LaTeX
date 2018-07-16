@@ -1,22 +1,27 @@
-# This document illustrates the use of the "make" tool to produce PDF files from LaTeX sources.
-# 
-#      Generate the PDF file:         make all
-#      Clean all the temporary files: make clean
-#
-# You may need to customise this document. 
+#      Generate the PDF file:              make
+#      Clean all the temporary files:      make clean
+#      Clean all files except the sources: make clear
 
 LATEX_EXE     = /usr/bin/lualatex
+PERL_EXE      = /usr/bin/perl
 LATEX_OPTIONS = -halt-on-error -shell-escape -interaction=nonstopmode --output-format=pdf
 PDF_VIEWER    = xdg-open 
+
+all: length.pdf \
+     output.dim
 
 length.pdf: length.tex basic.cls
 	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS" && ${PDF_VIEWER} $@
 
-all: length.pdf
+output.tex: template.tex char.pl
+	${PERL_EXE} char.pl
+
+output.dim: output.tex
+	${LATEX_EXE} ${LATEX_OPTIONS} $< && echo "SUCCESS"
 
 clean:
 	rm -f *.log *.out *.aux
 
-clean-all: clean
+clear: clean
 	rm -f *.pdf
 

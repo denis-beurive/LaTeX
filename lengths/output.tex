@@ -1,0 +1,263 @@
+\documentclass{article}
+
+\usepackage[a4paper]{geometry}
+\renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
+
+\usepackage{newfile}
+\newoutputstream{dimensions}
+\openoutputfile{\jobname.dim}{dimensions}
+
+\setlength{\parindent}{0pt}
+\setlength{\fboxsep}{0px}
+
+\begin{document}
+   \newsavebox{\boxaaaa}
+   \savebox{\boxaaaa}{\framebox{a}}
+   \addtostream{dimensions}{a:  \the\wd\boxaaaa, \the\ht\boxaaaa, \the\dp\boxaaaa}
+
+   \newsavebox{\boxbaaa}
+   \savebox{\boxbaaa}{\framebox{b}}
+   \addtostream{dimensions}{b:  \the\wd\boxbaaa, \the\ht\boxbaaa, \the\dp\boxbaaa}
+
+   \newsavebox{\boxcaaa}
+   \savebox{\boxcaaa}{\framebox{c}}
+   \addtostream{dimensions}{c:  \the\wd\boxcaaa, \the\ht\boxcaaa, \the\dp\boxcaaa}
+
+   \newsavebox{\boxdaaa}
+   \savebox{\boxdaaa}{\framebox{d}}
+   \addtostream{dimensions}{d:  \the\wd\boxdaaa, \the\ht\boxdaaa, \the\dp\boxdaaa}
+
+   \newsavebox{\boxeaaa}
+   \savebox{\boxeaaa}{\framebox{e}}
+   \addtostream{dimensions}{e:  \the\wd\boxeaaa, \the\ht\boxeaaa, \the\dp\boxeaaa}
+
+   \newsavebox{\boxfaaa}
+   \savebox{\boxfaaa}{\framebox{f}}
+   \addtostream{dimensions}{f:  \the\wd\boxfaaa, \the\ht\boxfaaa, \the\dp\boxfaaa}
+
+   \newsavebox{\boxgaaa}
+   \savebox{\boxgaaa}{\framebox{g}}
+   \addtostream{dimensions}{g:  \the\wd\boxgaaa, \the\ht\boxgaaa, \the\dp\boxgaaa}
+
+   \newsavebox{\boxhaaa}
+   \savebox{\boxhaaa}{\framebox{h}}
+   \addtostream{dimensions}{h:  \the\wd\boxhaaa, \the\ht\boxhaaa, \the\dp\boxhaaa}
+
+   \newsavebox{\boxiaaa}
+   \savebox{\boxiaaa}{\framebox{i}}
+   \addtostream{dimensions}{i:  \the\wd\boxiaaa, \the\ht\boxiaaa, \the\dp\boxiaaa}
+
+   \newsavebox{\boxjaaa}
+   \savebox{\boxjaaa}{\framebox{j}}
+   \addtostream{dimensions}{j:  \the\wd\boxjaaa, \the\ht\boxjaaa, \the\dp\boxjaaa}
+
+   \newsavebox{\boxkaaa}
+   \savebox{\boxkaaa}{\framebox{k}}
+   \addtostream{dimensions}{k:  \the\wd\boxkaaa, \the\ht\boxkaaa, \the\dp\boxkaaa}
+
+   \newsavebox{\boxlaaa}
+   \savebox{\boxlaaa}{\framebox{l}}
+   \addtostream{dimensions}{l:  \the\wd\boxlaaa, \the\ht\boxlaaa, \the\dp\boxlaaa}
+
+   \newsavebox{\boxmaaa}
+   \savebox{\boxmaaa}{\framebox{m}}
+   \addtostream{dimensions}{m:  \the\wd\boxmaaa, \the\ht\boxmaaa, \the\dp\boxmaaa}
+
+   \newsavebox{\boxnaaa}
+   \savebox{\boxnaaa}{\framebox{n}}
+   \addtostream{dimensions}{n:  \the\wd\boxnaaa, \the\ht\boxnaaa, \the\dp\boxnaaa}
+
+   \newsavebox{\boxoaaa}
+   \savebox{\boxoaaa}{\framebox{o}}
+   \addtostream{dimensions}{o:  \the\wd\boxoaaa, \the\ht\boxoaaa, \the\dp\boxoaaa}
+
+   \newsavebox{\boxpaaa}
+   \savebox{\boxpaaa}{\framebox{p}}
+   \addtostream{dimensions}{p:  \the\wd\boxpaaa, \the\ht\boxpaaa, \the\dp\boxpaaa}
+
+   \newsavebox{\boxqaaa}
+   \savebox{\boxqaaa}{\framebox{q}}
+   \addtostream{dimensions}{q:  \the\wd\boxqaaa, \the\ht\boxqaaa, \the\dp\boxqaaa}
+
+   \newsavebox{\boxraaa}
+   \savebox{\boxraaa}{\framebox{r}}
+   \addtostream{dimensions}{r:  \the\wd\boxraaa, \the\ht\boxraaa, \the\dp\boxraaa}
+
+   \newsavebox{\boxsaaa}
+   \savebox{\boxsaaa}{\framebox{s}}
+   \addtostream{dimensions}{s:  \the\wd\boxsaaa, \the\ht\boxsaaa, \the\dp\boxsaaa}
+
+   \newsavebox{\boxtaaa}
+   \savebox{\boxtaaa}{\framebox{t}}
+   \addtostream{dimensions}{t:  \the\wd\boxtaaa, \the\ht\boxtaaa, \the\dp\boxtaaa}
+
+   \newsavebox{\boxuaaa}
+   \savebox{\boxuaaa}{\framebox{u}}
+   \addtostream{dimensions}{u:  \the\wd\boxuaaa, \the\ht\boxuaaa, \the\dp\boxuaaa}
+
+   \newsavebox{\boxvaaa}
+   \savebox{\boxvaaa}{\framebox{v}}
+   \addtostream{dimensions}{v:  \the\wd\boxvaaa, \the\ht\boxvaaa, \the\dp\boxvaaa}
+
+   \newsavebox{\boxwaaa}
+   \savebox{\boxwaaa}{\framebox{w}}
+   \addtostream{dimensions}{w:  \the\wd\boxwaaa, \the\ht\boxwaaa, \the\dp\boxwaaa}
+
+   \newsavebox{\boxxaaa}
+   \savebox{\boxxaaa}{\framebox{x}}
+   \addtostream{dimensions}{x:  \the\wd\boxxaaa, \the\ht\boxxaaa, \the\dp\boxxaaa}
+
+   \newsavebox{\boxyaaa}
+   \savebox{\boxyaaa}{\framebox{y}}
+   \addtostream{dimensions}{y:  \the\wd\boxyaaa, \the\ht\boxyaaa, \the\dp\boxyaaa}
+
+   \newsavebox{\boxzaaa}
+   \savebox{\boxzaaa}{\framebox{z}}
+   \addtostream{dimensions}{z:  \the\wd\boxzaaa, \the\ht\boxzaaa, \the\dp\boxzaaa}
+
+   \newsavebox{\boxzbaa}
+   \savebox{\boxzbaa}{\framebox{A}}
+   \addtostream{dimensions}{A:  \the\wd\boxzbaa, \the\ht\boxzbaa, \the\dp\boxzbaa}
+
+   \newsavebox{\boxzcaa}
+   \savebox{\boxzcaa}{\framebox{B}}
+   \addtostream{dimensions}{B:  \the\wd\boxzcaa, \the\ht\boxzcaa, \the\dp\boxzcaa}
+
+   \newsavebox{\boxzdaa}
+   \savebox{\boxzdaa}{\framebox{C}}
+   \addtostream{dimensions}{C:  \the\wd\boxzdaa, \the\ht\boxzdaa, \the\dp\boxzdaa}
+
+   \newsavebox{\boxzeaa}
+   \savebox{\boxzeaa}{\framebox{D}}
+   \addtostream{dimensions}{D:  \the\wd\boxzeaa, \the\ht\boxzeaa, \the\dp\boxzeaa}
+
+   \newsavebox{\boxzfaa}
+   \savebox{\boxzfaa}{\framebox{E}}
+   \addtostream{dimensions}{E:  \the\wd\boxzfaa, \the\ht\boxzfaa, \the\dp\boxzfaa}
+
+   \newsavebox{\boxzgaa}
+   \savebox{\boxzgaa}{\framebox{F}}
+   \addtostream{dimensions}{F:  \the\wd\boxzgaa, \the\ht\boxzgaa, \the\dp\boxzgaa}
+
+   \newsavebox{\boxzhaa}
+   \savebox{\boxzhaa}{\framebox{G}}
+   \addtostream{dimensions}{G:  \the\wd\boxzhaa, \the\ht\boxzhaa, \the\dp\boxzhaa}
+
+   \newsavebox{\boxziaa}
+   \savebox{\boxziaa}{\framebox{H}}
+   \addtostream{dimensions}{H:  \the\wd\boxziaa, \the\ht\boxziaa, \the\dp\boxziaa}
+
+   \newsavebox{\boxzjaa}
+   \savebox{\boxzjaa}{\framebox{I}}
+   \addtostream{dimensions}{I:  \the\wd\boxzjaa, \the\ht\boxzjaa, \the\dp\boxzjaa}
+
+   \newsavebox{\boxzkaa}
+   \savebox{\boxzkaa}{\framebox{J}}
+   \addtostream{dimensions}{J:  \the\wd\boxzkaa, \the\ht\boxzkaa, \the\dp\boxzkaa}
+
+   \newsavebox{\boxzlaa}
+   \savebox{\boxzlaa}{\framebox{K}}
+   \addtostream{dimensions}{K:  \the\wd\boxzlaa, \the\ht\boxzlaa, \the\dp\boxzlaa}
+
+   \newsavebox{\boxzmaa}
+   \savebox{\boxzmaa}{\framebox{L}}
+   \addtostream{dimensions}{L:  \the\wd\boxzmaa, \the\ht\boxzmaa, \the\dp\boxzmaa}
+
+   \newsavebox{\boxznaa}
+   \savebox{\boxznaa}{\framebox{M}}
+   \addtostream{dimensions}{M:  \the\wd\boxznaa, \the\ht\boxznaa, \the\dp\boxznaa}
+
+   \newsavebox{\boxzoaa}
+   \savebox{\boxzoaa}{\framebox{N}}
+   \addtostream{dimensions}{N:  \the\wd\boxzoaa, \the\ht\boxzoaa, \the\dp\boxzoaa}
+
+   \newsavebox{\boxzpaa}
+   \savebox{\boxzpaa}{\framebox{O}}
+   \addtostream{dimensions}{O:  \the\wd\boxzpaa, \the\ht\boxzpaa, \the\dp\boxzpaa}
+
+   \newsavebox{\boxzqaa}
+   \savebox{\boxzqaa}{\framebox{P}}
+   \addtostream{dimensions}{P:  \the\wd\boxzqaa, \the\ht\boxzqaa, \the\dp\boxzqaa}
+
+   \newsavebox{\boxzraa}
+   \savebox{\boxzraa}{\framebox{Q}}
+   \addtostream{dimensions}{Q:  \the\wd\boxzraa, \the\ht\boxzraa, \the\dp\boxzraa}
+
+   \newsavebox{\boxzsaa}
+   \savebox{\boxzsaa}{\framebox{R}}
+   \addtostream{dimensions}{R:  \the\wd\boxzsaa, \the\ht\boxzsaa, \the\dp\boxzsaa}
+
+   \newsavebox{\boxztaa}
+   \savebox{\boxztaa}{\framebox{S}}
+   \addtostream{dimensions}{S:  \the\wd\boxztaa, \the\ht\boxztaa, \the\dp\boxztaa}
+
+   \newsavebox{\boxzuaa}
+   \savebox{\boxzuaa}{\framebox{T}}
+   \addtostream{dimensions}{T:  \the\wd\boxzuaa, \the\ht\boxzuaa, \the\dp\boxzuaa}
+
+   \newsavebox{\boxzvaa}
+   \savebox{\boxzvaa}{\framebox{U}}
+   \addtostream{dimensions}{U:  \the\wd\boxzvaa, \the\ht\boxzvaa, \the\dp\boxzvaa}
+
+   \newsavebox{\boxzwaa}
+   \savebox{\boxzwaa}{\framebox{V}}
+   \addtostream{dimensions}{V:  \the\wd\boxzwaa, \the\ht\boxzwaa, \the\dp\boxzwaa}
+
+   \newsavebox{\boxzxaa}
+   \savebox{\boxzxaa}{\framebox{W}}
+   \addtostream{dimensions}{W:  \the\wd\boxzxaa, \the\ht\boxzxaa, \the\dp\boxzxaa}
+
+   \newsavebox{\boxzyaa}
+   \savebox{\boxzyaa}{\framebox{X}}
+   \addtostream{dimensions}{X:  \the\wd\boxzyaa, \the\ht\boxzyaa, \the\dp\boxzyaa}
+
+   \newsavebox{\boxzzaa}
+   \savebox{\boxzzaa}{\framebox{Y}}
+   \addtostream{dimensions}{Y:  \the\wd\boxzzaa, \the\ht\boxzzaa, \the\dp\boxzzaa}
+
+   \newsavebox{\boxzzba}
+   \savebox{\boxzzba}{\framebox{Z}}
+   \addtostream{dimensions}{Z:  \the\wd\boxzzba, \the\ht\boxzzba, \the\dp\boxzzba}
+
+   \newsavebox{\boxzzca}
+   \savebox{\boxzzca}{\framebox{0}}
+   \addtostream{dimensions}{0:  \the\wd\boxzzca, \the\ht\boxzzca, \the\dp\boxzzca}
+
+   \newsavebox{\boxzzda}
+   \savebox{\boxzzda}{\framebox{1}}
+   \addtostream{dimensions}{1:  \the\wd\boxzzda, \the\ht\boxzzda, \the\dp\boxzzda}
+
+   \newsavebox{\boxzzea}
+   \savebox{\boxzzea}{\framebox{2}}
+   \addtostream{dimensions}{2:  \the\wd\boxzzea, \the\ht\boxzzea, \the\dp\boxzzea}
+
+   \newsavebox{\boxzzfa}
+   \savebox{\boxzzfa}{\framebox{3}}
+   \addtostream{dimensions}{3:  \the\wd\boxzzfa, \the\ht\boxzzfa, \the\dp\boxzzfa}
+
+   \newsavebox{\boxzzga}
+   \savebox{\boxzzga}{\framebox{4}}
+   \addtostream{dimensions}{4:  \the\wd\boxzzga, \the\ht\boxzzga, \the\dp\boxzzga}
+
+   \newsavebox{\boxzzha}
+   \savebox{\boxzzha}{\framebox{5}}
+   \addtostream{dimensions}{5:  \the\wd\boxzzha, \the\ht\boxzzha, \the\dp\boxzzha}
+
+   \newsavebox{\boxzzia}
+   \savebox{\boxzzia}{\framebox{6}}
+   \addtostream{dimensions}{6:  \the\wd\boxzzia, \the\ht\boxzzia, \the\dp\boxzzia}
+
+   \newsavebox{\boxzzja}
+   \savebox{\boxzzja}{\framebox{7}}
+   \addtostream{dimensions}{7:  \the\wd\boxzzja, \the\ht\boxzzja, \the\dp\boxzzja}
+
+   \newsavebox{\boxzzka}
+   \savebox{\boxzzka}{\framebox{8}}
+   \addtostream{dimensions}{8:  \the\wd\boxzzka, \the\ht\boxzzka, \the\dp\boxzzka}
+
+   \newsavebox{\boxzzla}
+   \savebox{\boxzzla}{\framebox{9}}
+   \addtostream{dimensions}{9:  \the\wd\boxzzla, \the\ht\boxzzla, \the\dp\boxzzla}
+
+\end{document}
+
