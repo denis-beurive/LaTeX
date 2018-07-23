@@ -1,0 +1,76 @@
+\documentclass{class}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+
+% Test 1 and 2
+% Please note the blank line just above the block "{ \vspace{10pt} }"
+\newenvironment{sectionContent1}{
+
+  { \vspace{10pt} }
+}%
+
+% Test 3
+% Please note the absence of a blank line just above the block "{ \vspace{10pt} }"
+\newenvironment{sectionContent2}{
+  { \vspace{10pt} }
+}%
+
+% Test 4
+% The presence of a blanck line between the upper box and the block "{ \vspace{10pt} }" is very important.
+% How to insert this blanck line in the block that contains the LaTeX code that is inserted before the text
+% when the environment is used ? (https://fr.sharelatex.com/learn/Environments#Defining_a_new_environment)
+
+\newenvironment{sectionContent3}{
+  {
+     \vspace{10pt} }
+}%
+
+\begin{document}
+
+    % Test 1
+    % There is no blank line before "\begin{sectionContent1}".
+    % The result is not what I expect it to be. The vertical space between the bottom 
+    % of the upper box and the text within the section is too high (it should be 10pt).
+
+    \framebox[\textwidth][c]{Before the section} 
+    \begin{sectionContent1}
+       \textbf{Test 1}: in the section. The vertical space between the bottom of the upper box and the text
+       within the section is too high (it should be 10pt).
+    \end{sectionContent1}
+    \framebox[\textwidth][c]{After the section}
+
+    % Test 2
+    % There is a blank line before "\begin{sectionContent1}".
+    % The result is what I expect it to be.
+
+    \framebox[\textwidth][c]{Before the section}
+
+    \begin{sectionContent1}
+       \textbf{Test 2}: in the section. The result is what I expect it to be.
+    \end{sectionContent1}
+    \framebox[\textwidth][c]{After the section}
+
+    % Test 3
+    % There is a blank line before "\begin{sectionContent2}".
+    % The result is what I expect it to be.
+
+    \framebox[\textwidth][c]{Before the section}
+
+    \begin{sectionContent2}
+       \textbf{Test 3}: in the section. The result is what I expect it to be.
+    \end{sectionContent2}
+    \framebox[\textwidth][c]{After the section}
+
+    % Test 4
+    % I tried to put the blank line in the environment definition.
+    % But it does not work.
+
+    \framebox[\textwidth][c]{Before the section}
+    \begin{sectionContent3}
+       Test 4: in the section.
+    \end{sectionContent3}
+    \framebox[\textwidth][c]{After the section}
+
+\end{document}
