@@ -1,0 +1,24 @@
+\documentclass{class}
+\usepackage{calc}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\fboxsep}{0pt}
+
+% As pointed out by "gernot", \newenvironment takes 3 parameters!
+
+\newenvironment{sectionContent}{%
+   \par\vspace{5pt}%
+}{%
+}
+
+
+\begin{document}
+
+    \framebox[\textwidth/2][c]{Before the section}\par
+    \begin{sectionContent}
+       \textbf{Test 1}\par
+    \end{sectionContent}
+    \framebox[\textwidth/2][c]{After the section}
+
+\end{document}
