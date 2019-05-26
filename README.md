@@ -15,6 +15,7 @@ In order to use `lualatex`, you must install the packages listed below:
 * `texlive-xetex`
 * `lmodern` (this package fixes a problem with luaotfload)
 * `texlive-fonts-extra`
+* `font-manager` (recommended)
 
 > See: https://tex.stackexchange.com/questions/161595/fontspec-throwing-error-with-lualatex-broken
 
@@ -25,6 +26,7 @@ commands:
 	sudo apt-get install texlive-xetex
 	sudo apt-get install lmodern 
 	sudo apt-get install texlive-fonts-extra
+	sudo apt install font-manager
 
 ### Recommanded
 
