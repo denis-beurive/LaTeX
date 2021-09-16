@@ -1,18 +1,31 @@
-\documentclass{article}
-\pagenumbering{gobble}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\setlength{\parindent}{0pt}
-\begin{document}
+	\documentclass{article}
+	\pagenumbering{gobble}
+	\usepackage[utf8]{inputenc}
+	\usepackage{amsmath}
+	\usepackage{amssymb}
+	\setlength{\parindent}{0pt}
+	\begin{document}
 
-    \begin{itemize}
-        \item Let $ N $ be the number of processes.
-              Processes are identified by their indice $ i $ ($ w_{i} \forall{i} \in \mathbb{N} \land i \in [1, N] $ )
-    \end{itemize}
+		\begin{itemize}
+			\item Records are identified by their subscripts $ i $, such as ($ i \in \mathbb{N} $). Notation: $ r_{i} $.
+		\end{itemize}
 
-    \begin{equation} \label{eqn1}
-        S(p_{d}, s_{i}) = \sum_{n=1}^{N} s(w_{n}, p_{d}, s_{i})
-    \end{equation}
+		\newpage
 
-\end{document}
+		\begin{equation} \label{eqn1}
+			alpha = \sum_{i=1}^{10} r_{i}
+		\end{equation}
+
+		\newpage
+
+		\begin{itemize}
+			\item Big records are identified by their subscripts $ i $, such as ($ i \in \mathbb{N} $). Notation: $ R_{i} $.
+		\end{itemize}
+
+		\newpage
+
+		\begin{equation} \label{eqn2}
+			beta = \sum_{i=1}^{10} R_{i}
+		\end{equation}
+
+	\end{document}
