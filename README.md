@@ -70,3 +70,5 @@ Useful resources to quickly generate formulas using TexLive base installation:
 * [equations.tex](equations/equations.tex)
 * [equations.sh](equations/equations.sh)
 
+> To install a LaTeX package: `tlmgr install <package name>` (see [this link](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages))
+
